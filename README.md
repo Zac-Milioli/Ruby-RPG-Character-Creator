@@ -7,3 +7,7 @@
 PARA FUNCIONAR, É NECESSÁRIO QUE O RUBY ESTEJA INSTALADO DEVIAMENTE. [Clique aqui para ir à pagina de download](https://www.ruby-lang.org/pt/downloads/).
 <br>Execute o arquivo "play.rb" ou, alternativamente, abra o prompt de comando e navege até a pasta onde está o arquivo "play.rb" e execute o comando
 <br><strong>ruby play.rb</strong>
+
+<h2>O que é RRB e o que são arquivos .rrb?</h2>
+
+RRB é uma abreviação de <strong>Ruby RPG Character</strong>, e os arquivos <strong>.rrb</strong> são arquivos especiais criados especificamente para este programa que contém os dados de personagens para importação e exportação dentro do próprio programa 
