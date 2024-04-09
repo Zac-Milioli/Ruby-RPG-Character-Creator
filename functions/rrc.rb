@@ -1,7 +1,7 @@
 module RRCFile
-    class ExpRRB(filepath)
+    class ExpRRC
         attr_accessor :filepath
-        def initialize
+        def initialize(filepath=nil)
             @filepath = filepath
         end
     end
