@@ -10,7 +10,7 @@ while running
     puts "\n"*150
     puts "Bem vindo ao Ruby RPG Character Creator!"
     puts "- "*50
-    puts "\n\nEscolha uma opção\n\n[1] Criar um novo personagem\n[2] Listar e selecionar personagens\n\n[ENTER] Sair\n\n"
+    puts "\n\nEscolha uma opção\n\n[1] Criar um novo RRC\n[2] Listar e selecionar RRC\n[3] Importar RRC\n\n[ENTER] Sair\n\n"
     puts "- "*50
     selection = gets.chomp
     case selection
@@ -110,9 +110,35 @@ while running
                 end    
             end  
         end
+    when "3"
+        puts "\n"*150
+        puts "\tArquivos disponíveis"
+        puts "- "*50
+        import_object = RRCFile::ImpRRC.new(instance_rrc)
+        imports = import_object.read_files
+        puts imports
+        puts "- "*50
+        puts "\n[0] Importar todos\n[1] Selecionar qual importar"
+        puts "\n\nPressione ENTER para voltar ao menu\n"
+        opt = gets.chomp
+        case opt
+        when "0"
+            import_object.select_all_files(imports)
+        when "1"
+            puts "\n"*150
+            puts "\tArquivos disponíveis"
+            puts "- "*50
+            puts imports
+            puts "- "*50
+            puts "\n\nDigite o nome do arquivo que deseja importar. Pressione ENTER para cancelar\n"
+            arquivo = gets.chomp
+            if arquivo != ""
+                import_object.select_one_file(arquivo)
+            end
+        end
     else
         puts "\n\nEscolha uma opção válida!"
-        puts "Pressione ENTER para voltar ao menu"
+        puts "Pressione ENTER para voltar ao menu\n"
         gets
     end
 end
